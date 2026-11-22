@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>এশকে ছাদেক — অ্যাপ ডাউনলোড</title>
+<style>
+  :root { --ink:#1f2a24; --cream:#f7f3e8; --green:#0d5c3f; --gold:#b8892f; }
+  * { box-sizing: border-box; }
+  body { margin:0; font-family:"Noto Sans Bengali","Hind Siliguri",system-ui,sans-serif; background:var(--cream); color:var(--ink); line-height:1.75; }
+  .wrap { max-width:640px; margin:0 auto; padding:28px 20px 56px; }
+  header { text-align:center; padding:12px 0 8px; }
+  .ornament { color:var(--gold); font-size:20px; letter-spacing:10px; }
+  h1 { font-size:32px; margin:6px 0 2px; }
+  .sub { color:#5b6b60; font-size:15px; margin:0 0 4px; }
+  .badge { display:inline-block; background:#e7dfc9; color:#6b5623; border-radius:999px; padding:3px 14px; font-size:13px; margin-top:10px; }
+  .card { background:#fffdf6; border:1px solid #e6ddc4; border-radius:16px; padding:20px; margin-top:18px; box-shadow:0 2px 10px rgba(60,45,10,.05); }
+  .btn { display:block; text-align:center; background:var(--green); color:#fff; text-decoration:none; font-size:21px; font-weight:700; padding:16px; border-radius:14px; margin:10px 0 8px; }
+  .btn small { display:block; font-weight:400; font-size:13px; opacity:.85; margin-top:2px; }
+  .steps { counter-reset:s; list-style:none; padding:0; margin:0; }
+  .steps li { counter-increment:s; position:relative; padding:10px 0 10px 44px; }
+  .steps li::before { content:counter(s); position:absolute; left:0; top:12px; width:28px; height:28px; border-radius:50%; background:#e7dfc9; color:#6b5623; font-weight:700; display:flex; align-items:center; justify-content:center; font-size:14px; }
+  .note { background:#fdf3dd; border:1px solid #ecd9a8; border-radius:12px; padding:12px 14px; font-size:14px; margin-top:14px; }
+  .warn { background:#fbe9e7; border:1px solid #edc2bc; }
+  h2 { font-size:19px; margin:0 0 8px; }
+  .qr { display:flex; gap:18px; align-items:center; flex-wrap:wrap; }
+  .qr img { width:132px; height:132px; image-rendering:pixelated; background:#fff; border:8px solid #fff; border-radius:12px; }
+  code { background:#efe9d8; padding:1px 6px; border-radius:6px; font-size:13px; word-break:break-all; }
+  footer { text-align:center; color:#7a877e; font-size:13px; margin-top:26px; }
+  a { color:var(--green); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="ornament">❖ ❖ ❖</div>
+    <h1>এশকে ছাদেক</h1>
+    <p class="sub">গাউছিয়া আহমদিয়া-পোমরা দরবার শরীফ</p>
+    <span class="badge">সর্বশেষ সংস্করণ: 1.1.70-beta • ৪৪ এমবি</span>
+  </header>
+
+  <div class="card">
+    <a class="btn" href="https://github.com/aamiqram/ashke-sadek-downloads/releases/latest/download/Ashke-Shadek.apk">
+      অ্যাপ ডাউনলোড করুন
+      <small>Android 5.0 বা তার পরের ফোনের জন্য</small>
+    </a>
+    <div class="note">ডাউনলোডে সমস্যা হলে Chrome ব্রাউজার ব্যবহার করুন। ফাইলটি <b>Ashke-Shadek.apk</b> নামে ডাউনলোড হবে।</div>
+  </div>
+
+  <div class="card">
+    <h2>ইনস্টল করার নিয়ম</h2>
+    <ol class="steps">
+      <li>ডাউনলোড শেষে Chrome-এর <b>Downloads</b> থেকে <b>Ashke-Shadek.apk</b> ফাইলটি খুলুন।</li>
+      <li>অনুমতি চাইলে চালু করুন: <b>Settings → Apps → Special access → Install unknown apps → Chrome → Allow</b>।</li>
+      <li>Play Protect সতর্কতা এলে <b>More details → Install anyway</b> চাপুন।</li>
+    </ol>
+    <div class="note warn"><b>MIUI ফোনে (Redmi / POCO):</b> নিরাপত্তা সতর্কতা এলে <b>Settings → Privacy protection → Special permissions</b> থেকে Chrome-কে অনুমতি দিন।</div>
+  </div>
+
+  <div class="card">
+    <h2>নতুন সংস্করণ</h2>
+    <p style="margin:0">অ্যাপের ভেতর থেকেই আপডেট পাওয়া যাবে — বারবার নতুন লিংক খোঁজার দরকার নেই।</p>
+  </div>
+
+  <div class="card qr">
+    <img src="qr.png" alt="QR code">
+    <div>
+      <h2 style="margin:0 0 4px">QR স্ক্যান করুন</h2>
+      <p style="margin:0;font-size:14px;color:#5b6b60">এই পেজটি খুলতে ফোনের ক্যামেরা দিয়ে স্ক্যান করুন।</p>
+    </div>
+  </div>
+
+  <footer>
+    <p>গাউছিয়া আহমদিয়া-পোমরা দরবার শরীফ</p>
+    <p>SHA-256: <code>7e3c1688…600b2d6</code></p>
+  </footer>
+</div>
+</body>
+</html>
