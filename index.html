@@ -18,8 +18,8 @@
   .btn { display:block; text-align:center; background:var(--green); color:#fff; text-decoration:none; font-size:21px; font-weight:700; padding:16px; border-radius:14px; margin:10px 0 8px; }
   .btn small { display:block; font-weight:400; font-size:13px; opacity:.85; margin-top:2px; }
   .steps { counter-reset:s; list-style:none; padding:0; margin:0; }
-  .steps li { counter-increment:s; position:relative; padding:10px 0 10px 44px; }
-  .steps li::before { content:counter(s); position:absolute; left:0; top:12px; width:28px; height:28px; border-radius:50%; background:#e7dfc9; color:#6b5623; font-weight:700; display:flex; align-items:center; justify-content:center; font-size:14px; }
+  .steps li { counter-increment:s; position:relative; padding:8px 0 8px 44px; }
+  .steps li::before { content:counter(s); position:absolute; left:0; top:10px; width:28px; height:28px; border-radius:50%; background:#e7dfc9; color:#6b5623; font-weight:700; display:flex; align-items:center; justify-content:center; font-size:14px; }
   .note { background:#fdf3dd; border:1px solid #ecd9a8; border-radius:12px; padding:12px 14px; font-size:14px; margin-top:14px; }
   .warn { background:#fbe9e7; border:1px solid #edc2bc; }
   h2 { font-size:19px; margin:0 0 8px; }
@@ -28,6 +28,14 @@
   code { background:#efe9d8; padding:1px 6px; border-radius:6px; font-size:13px; word-break:break-all; }
   footer { text-align:center; color:#7a877e; font-size:13px; margin-top:26px; }
   a { color:var(--green); }
+  .lead { color:#5b6b60; font-size:14px; margin:0 0 8px; }
+  .step { border-top:1px dashed #e6ddc4; padding-top:16px; margin-top:16px; }
+  .step:first-of-type { border-top:0; padding-top:0; margin-top:8px; }
+  .step h3 { font-size:17px; margin:0 0 3px; display:flex; align-items:center; gap:10px; }
+  .step h3 .num { display:inline-flex; width:28px; height:28px; border-radius:50%; background:var(--green); color:#fff; align-items:center; justify-content:center; font-size:14px; flex:none; }
+  .step p { margin:0; font-size:15px; }
+  .shot { display:block; width:100%; max-width:400px; height:auto; margin:10px auto 0; border-radius:12px; border:1px solid #e6ddc4; }
+  .cap { text-align:center; font-size:13px; color:#7a877e; margin:4px 0 0; }
 </style>
 </head>
 <body>
@@ -42,19 +50,79 @@
   <div class="card">
     <a class="btn" href="https://github.com/aamiqram/ashke-sadek-downloads/releases/latest/download/Ashke-Shadek.apk">
       অ্যাপ ডাউনলোড করুন
-      <small>Android 5.0 বা তার পরের ফোনের জন্য</small>
+      <small>Android 5.0 বা তার পরের ফোনের জন্য • ৪৪ এমবি</small>
     </a>
-    <div class="note">ডাউনলোডে সমস্যা হলে Chrome ব্রাউজার ব্যবহার করুন। ফাইলটি <b>Ashke-Shadek.apk</b> নামে ডাউনলোড হবে।</div>
+    <div class="note">ডাউনলোডে সমস্যা হলে Chrome বা অন্য ব্রাউজার দিয়ে চেষ্টা করুন। ফাইলটি <b>Ashke-Shadek.apk</b> নামে ডাউনলোড হবে।</div>
   </div>
 
   <div class="card">
-    <h2>ইনস্টল করার নিয়ম</h2>
+    <h2>ছবিসহ ইনস্টল গাইড</h2>
+    <p class="lead">ছবিতে <b>লাল দাগ</b> দেওয়া বাটনে চাপুন। ধাপগুলো উপর থেকে নিচে দেখুন।</p>
+
+    <div class="step">
+      <h3><span class="num">১</span> ডাউনলোড করুন</h3>
+      <p>সবুজ <b>“অ্যাপ ডাউনলোড করুন”</b> বাটনে চাপুন। ডাউনলোড শেষ হলে ব্রাউজারের <b>Downloads</b> থেকে <b>Ashke-Shadek.apk</b> ফাইলটি খুলুন।</p>
+      <img class="shot" src="guide/step1-download.jpg" width="540" height="915" loading="lazy" alt="ডাউনলোড বাটন">
+      <p class="cap">সবুজ বাটনে চাপুন</p>
+    </div>
+
+    <div class="step">
+      <h3><span class="num">২</span> “Blocked” এলে Settings চাপুন</h3>
+      <p>এই সতর্কতা এলে <b>SETTINGS</b> চাপুন। (সব ফোনে এই ধাপ আসবে না।)</p>
+      <img class="shot" src="guide/step2-settings.jpg" width="540" height="915" loading="lazy" alt="Settings বাটন">
+      <p class="cap">Cancel নয় — SETTINGS</p>
+    </div>
+
+    <div class="step">
+      <h3><span class="num">৩</span> Unknown sources চালু করুন</h3>
+      <p><b>Unknown sources</b>-এর সুইচটি ডান দিকে চালু করুন।</p>
+      <img class="shot" src="guide/step3-toggle.jpg" width="540" height="915" loading="lazy" alt="Unknown sources সুইচ">
+      <p class="cap">সুইচটি ডান দিকে চালু করুন</p>
+      <div class="note">Android ৮ বা তার পরের ফোনে এই জায়গায় যান: <b>Settings → Apps → Special access → Install unknown apps → যে ব্রাউজার দিয়ে ডাউনলোড করেছেন → Allow</b>।</div>
+    </div>
+
+    <div class="step">
+      <h3><span class="num">৪</span> সতর্কবার্তায় OK চাপুন</h3>
+      <p>“more vulnerable…” লেখা সতর্কবার্তা এলে <b>OK</b> চাপুন — <b>Cancel নয়</b>।</p>
+      <img class="shot" src="guide/step4-ok.jpg" width="540" height="915" loading="lazy" alt="OK বাটন">
+      <p class="cap">OK চাপুন</p>
+    </div>
+
+    <div class="step">
+      <h3><span class="num">৫</span> INSTALL চাপুন</h3>
+      <p>ফোনের ইনস্টলার এলে <b>INSTALL</b> চাপুন।</p>
+      <img class="shot" src="guide/step5-install.jpg" width="540" height="915" loading="lazy" alt="INSTALL বাটন">
+      <p class="cap">INSTALL চাপুন</p>
+    </div>
+
+    <div class="step">
+      <h3><span class="num">৬</span> Play Protect এলে Decline চাপুন</h3>
+      <p>“Turn on Play Protect?” এলে <b>Decline</b> চাপুন। Accept চাপলে পরের আপডেটে বাধা আসতে পারে।</p>
+      <img class="shot" src="guide/step6-decline.jpg" width="540" height="915" loading="lazy" alt="Decline বাটন">
+      <p class="cap">Accept নয় — Decline</p>
+    </div>
+
+    <div class="step">
+      <h3><span class="num">৭</span> Open চাপুন — শেষ!</h3>
+      <p>ফোনের নিজের স্ক্যানে <b>“Passed security tests”</b> এলে <b>Open</b> চাপুন। অ্যাপ চালু হয়ে যাবে।</p>
+      <img class="shot" src="guide/step7-open.jpg" width="540" height="915" loading="lazy" alt="Open বাটন">
+      <p class="cap">Open চাপুন</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Play Protect আটকে দিলে</h2>
+    <p style="margin:0 0 6px">কিছু ফোনে Play Protect সরাসরি ইনস্টল আটকে দেয় — কোনো <b>Install</b> বাটনই দেখায় না। তখন শুধু এই ধাপটি করুন।</p>
     <ol class="steps">
-      <li>ডাউনলোড শেষে Chrome-এর <b>Downloads</b> থেকে <b>Ashke-Shadek.apk</b> ফাইলটি খুলুন।</li>
-      <li>অনুমতি চাইলে চালু করুন: <b>Settings → Apps → Special access → Install unknown apps → Chrome → Allow</b>।</li>
-      <li>Play Protect সতর্কতা এলে <b>More details → Install anyway</b> চাপুন।</li>
+      <li>Play Store খুলুন → উপরের ডান দিকে আপনার <b>প্রোফাইল ছবি</b>তে চাপুন।</li>
+      <li><b>Play Protect</b> → উপরের ডান দিকে <b>⚙️</b> চাপুন।</li>
+      <li><b>Scan apps with Play Protect</b> বন্ধ করুন।</li>
+      <li>ফাইলটি আবার ইনস্টল করুন।</li>
     </ol>
-    <div class="note warn"><b>MIUI ফোনে (Redmi / POCO):</b> নিরাপত্তা সতর্কতা এলে <b>Settings → Privacy protection → Special permissions</b> থেকে Chrome-কে অনুমতি দিন।</div>
+    <img class="shot" src="guide/step8-playprotect.jpg" width="540" height="915" loading="lazy" alt="Play Protect settings">
+    <p class="cap">⚙️ আইকনটি এখানে</p>
+    <div class="note">ইনস্টল শেষ হলে চাইলে Play Protect আবার চালু করতে পারেন।</div>
+    <div class="note warn"><b>Samsung:</b> Settings → Security and privacy → <b>Auto Blocker</b> বন্ধ করুন।<br><b>MIUI (Redmi / POCO):</b> Settings → Privacy protection → Special permissions → আপনার ব্রাউজারকে অনুমতি দিন।</div>
   </div>
 
   <div class="card">
