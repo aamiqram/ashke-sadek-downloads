@@ -12,6 +12,12 @@ A maintainer dispatches **Build Android APK** on `main` in the source repository
 
 The workflow needs the `DOWNLOADS_REPO_TOKEN` Actions secret in the source repository: a token with write access to this repository's contents. Prefer a fine-grained token limited to this repository with **Contents: Read and write**.
 
+## Why `update-mirror` is separate
+
+`update-mirror` is an **orphan branch** with no shared history with `main`. It contains only `update.json` and `Ashke-Shadek.apk` and is force-pushed on every release. The in-app updater reads those files directly from `raw.githubusercontent.com`.
+
+Do not merge it into `main`: the unrelated history is intentional, it keeps the ~44 MB APK out of the site branch, and the next release force-pushes the branch anyway. GitHub's compare page will always say the histories are unrelated.
+
 ## Verify after publishing
 
 - `releases/latest/download/Ashke-Shadek.apk` returns the new APK; size and SHA-256 match.
